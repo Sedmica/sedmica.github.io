@@ -1,0 +1,23 @@
+<div class="searchOverlay _js-searchOverlay" style="display: none;">
+	<div class="searchOverlay--inner _js-searchInner">
+		<form action="{{site.baseurl}}/search" method="GET">
+			<input type="text" class="searchOverlay--input _js-searchInput" placeholder="Šta želiš da naučiš?" name="query" >
+            <input type="submit" class="searchOverlay--submit" name="search" value="Traži">
+			 
+		</form>
+		<div class="searchOverlay--tags">
+			{% for category in site.categories %}
+				<a href="{{site.baseurl}}/categories/{{ category | first | remove:' ' }}" class="searchOverlay--tagsItem">{{ category | first }}</a> 
+				{% if forloop.last %}.{% else %}, {% endif %}
+			{% endfor %}
+              <!--
+                  <a href="javascript:;" >Ableton</a>
+                  <a href="javascript:;" class="searchOverlay--tagsItem">CSS3</a>
+                  <a href="javascript:;" class="searchOverlay--tagsItem">3D Max</a>
+                  <a href="javascript:;" class="searchOverlay--tagsItem">Phyton</a>
+                  <a href="javascript:;" class="searchOverlay--tagsItem">Brush</a>
+                  <a href="javascript:;" class="searchOverlay--tagsItem">Retouch</a>
+                  <a href="javascript:;" class="searchOverlay--tagsItem">jQuery</a> -->
+        </div>
+    </div>
+</div>

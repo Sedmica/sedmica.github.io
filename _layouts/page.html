@@ -1,0 +1,28 @@
+{% include head.md %}
+{% include header.html %}
+	<article class="article cc--audio article--new">
+		<section class="article--left">
+			<a href="javascript:;" class="article--thumbnail" style="background-image: url({{site.baseurl}}/images/post/{{page.image.feature}});"> 
+			  <!-- not visible on single page, because on that page the post is already read. <i class="article--newDot" title="Ovaj tekst još uvek niste pročitali"></i> -->
+			</a>
+		</section>
+		<section class="article--right">			
+			<a href="{{site.baseurl}}/categories/{{page.categories}}" class="article--category">{{page.categories}}</a>
+			<h2 class="article--title">
+				<a href="javascript:;">
+					  {{ page.title }}
+				</a>
+			</h2>
+			<span class="article--info">
+				<span class="article--author">author</span>
+				<a href="javascript:;" class="article--authorName">{{ page.author }}</a>
+			</span>
+		</section>
+		<section class="article--content">
+			{{content}}
+		</section>
+	</article>
+
+	{% include newsletter.html %}
+	
+{% include footer.html %}

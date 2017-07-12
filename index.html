@@ -1,1 +1,187 @@
-This is Test html.
+---
+layout: default
+title: Sedmica.rs
+---
+{% for post in paginator.posts %} 		 
+      
+	<article class="article cc--inspiracija article--new">
+	  <section class="article--left">
+		  <a href="javascript:;" class="article--thumbnail" style="background-image: url({{site.baseurl}}/images/post/feature/{{ post.image.feature }});"></a>
+	  </section>
+	  <section class="article--right">
+		<a href="{{site.baseurl}}/categories/{{post.categories}}" class="article--category">{{post.categories}}</a>
+		  
+		  <h2 class="article--title">
+			  <a href="{{site.baseurl}}{{post.url}}">
+				  {{ post.title }}
+			  </a>
+		  </h2>
+		  <span class="article--info">
+			  <span class="article--author">autor</span>
+			  <a href="javascript:;" class="article--authorName">{{ post.author }}</a>
+		  </span>
+	  </section>
+	</article>
+{% endfor %}
+{% include pagination.html%}
+		  
+		  
+<!--
+{% for category in site.categories %}
+	<a href="{{site.baseurl}}/categories/{{ category | first | remove:' ' }}"><strong>{{ category | first }}</strong></a> {% if forloop.last %}.{% else %}, {% endif %}
+{% endfor %}
+<article class="article cc--inspiracija article--new">
+  <section class="article--left">
+	  <a href="javascript:;" class="article--thumbnail" style="background-image: url({{site.baseurl}}/images/thumbnails/1.jpg);"></a>
+  </section>
+  <section class="article--right">
+	  <a href="javascript:;" class="article--category">Inspiracija</a>
+	  <h2 class="article--title">
+		  <a href="javascript:;">
+			  Najbolji evrospki festival: Sziget
+		  </a>
+	  </h2>
+	  <span class="article--info">
+		  <span class="article--author">autor</span>
+		  <a href="javascript:;" class="article--authorName">Momčilo Popov</a>
+	  </span>
+  </section>
+</article>
+<article class="article cc--nedelja article--new">
+  <section class="article--left">
+	  <a href="javascript:;" class="article--thumbnail" style="background-image: url(http://sedmica.rs/wp-content/uploads/2015/05/11258943_10205803871269015_1917597674_n-640x315.jpg);"></a>
+  </section>
+  <section class="article--right">
+	  <a href="javascript:;" class="article--category">Nedelja</a>
+	  <h2 class="article--title">
+		  <a href="javascript:;">
+			  Najveći Behance događaj u svetu – Belgrade Behance Reviews
+		  </a>
+	  </h2>
+	  <span class="article--info">
+		  <span class="article--author">autor</span>
+		  <a href="javascript:;" class="article--authorName">Momčilo Popov</a>
+	  </span>
+  </section>
+</article>
+<article class="article cc--nedelja article--new">
+  <section class="article--left">
+	  <a href="javascript:;" class="article--thumbnail" style="background-image: url(http://sedmica.rs/wp-content/uploads/2015/04/cover-1-640x450.jpg);"></a>
+  </section>
+  <section class="article--right">
+	  <a href="javascript:;" class="article--category">Nedelja</a>
+	  <h2 class="article--title">
+		  <a href="javascript:;">
+			  Deep House – Kako napraviti Beat
+		  </a>
+	  </h2>
+	  <span class="article--info">
+		  <span class="article--author">autor</span>
+		  <a href="javascript:;" class="article--authorName">Branislav Vajagić</a>
+	  </span>
+  </section>
+</article>
+<article class="article cc--nedelja">
+  <section class="article--left">
+	  <a href="javascript:;" class="article--thumbnail" style="background-image: url(http://sedmica.rs/wp-content/uploads/2015/03/1.-Ad%C3%A9lie-Penguin-Rookery-%E2%80%93-Cape-Royds-Antarctica-640x480.jpg);"></a>
+  </section>
+  <section class="article--right">
+	  <a href="javascript:;" class="article--category">Nedelja</a>
+	  <h2 class="article--title">
+		  <a href="javascript:;">
+			  15 fantastičnih Google Street View destinacija
+		  </a>
+	  </h2>
+	  <span class="article--info">
+		  <span class="article--author">autor</span>
+		  <a href="javascript:;" class="article--authorName">Momčilo Popov</a>
+	  </span>
+  </section>
+</article>
+<article class="article cc--audio">
+  <section class="article--left">
+	  <a href="javascript:;" class="article--thumbnail" style="background-image: url(http://sedmica.rs/wp-content/uploads/2015/03/Cover-640x450.jpg);"></a>
+  </section>
+  <section class="article--right">
+	  <a href="javascript:;" class="article--category">Audio</a>
+	  <h2 class="article--title">
+		  <a href="javascript:;">
+			  Reason 8 – Alligator – Kako napraviti Trance teksturu
+		  </a>
+	  </h2>
+	  <span class="article--info">
+		  <span class="article--author">autor</span>
+		  <a href="javascript:;" class="article--authorName">Branislav Vajagić</a>
+	  </span>
+  </section>
+</article>
+<article class="article cc--nedelja">
+  <section class="article--left">
+	  <a href="javascript:;" class="article--thumbnail" style="background-image: url(images/content/thumbnails/1.jpg);"></a>
+  </section>
+  <section class="article--right">
+	  <a href="javascript:;" class="article--category">Nedelja</a>
+	  <h2 class="article--title">
+		  <a href="javascript:;">
+			  Najveći Behance događaj u svetu – Belgrade Behance Reviews
+		  </a>
+	  </h2>
+	  <span class="article--info">
+		  <span class="article--author">autor</span>
+		  <a href="javascript:;" class="article--authorName">Momčilo Popov</a>
+	  </span>
+  </section>
+</article>
+<article class="article cc--nedelja">
+  <section class="article--left">
+	  <a href="javascript:;" class="article--thumbnail" style="background-image: url(images/content/thumbnails/1.jpg);"></a>
+  </section>
+  <section class="article--right">
+	  <a href="javascript:;" class="article--category">Nedelja</a>
+	  <h2 class="article--title">
+		  <a href="javascript:;">
+			  Najveći Behance događaj u svetu – Belgrade Behance Reviews
+		  </a>
+	  </h2>
+	  <span class="article--info">
+		  <span class="article--author">autor</span>
+		  <a href="javascript:;" class="article--authorName">Momčilo Popov</a>
+	  </span>
+  </section>
+</article>
+<article class="article cc--nedelja">
+  <section class="article--left">
+	  <a href="javascript:;" class="article--thumbnail" style="background-image: url(images/content/thumbnails/1.jpg);"></a>
+  </section>
+  <section class="article--right">
+	  <a href="javascript:;" class="article--category">Nedelja</a>
+	  <h2 class="article--title">
+		  <a href="javascript:;">
+			  Najveći Behance događaj u svetu – Belgrade Behance Reviews
+		  </a>
+	  </h2>
+	  <span class="article--info">
+		  <span class="article--author">autor</span>
+		  <a href="javascript:;" class="article--authorName">Momčilo Popov</a>
+	  </span>
+  </section>
+</article>
+<article class="article cc--nedelja">
+  <section class="article--left">
+	  <a href="javascript:;" class="article--thumbnail" style="background-image: url(images/content/thumbnails/1.jpg);"></a>
+  </section>
+  <section class="article--right">
+	  <a href="javascript:;" class="article--category">Nedelja</a>
+	  <h2 class="article--title">
+		  <a href="javascript:;">
+			  Najveći Behance događaj u svetu – Belgrade Behance Reviews
+		  </a>
+	  </h2>
+	  <span class="article--info">
+		  <span class="article--author">autor</span>
+		  <a href="javascript:;" class="article--authorName">Momčilo Popov</a>
+	  </span>
+  </section>
+</article>
+-->
+<div>Pagination <i>(display 10 posts per page)</i></div>

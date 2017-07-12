@@ -1,0 +1,41 @@
+{% include head.md %}
+{% include header.html %}
+	<h1>Posts with {{ page.type }} '{{ page.title }}'</h1>
+	
+	{% for post in page.posts %}		 
+      
+	<article class="article cc--inspiracija article--new">
+	  <section class="article--left">
+		  <a href="javascript:;" class="article--thumbnail" style="background-image: url({{site.baseurl}}/images/post/cover.jpg);"></a>
+	  </section>
+	  <section class="article--right">
+		  <a href="javascript:;" class="article--category">{{post.categories}}</a>
+		  <h2 class="article--title">
+			  <a href="{{site.baseurl}}{{post.url}}">
+				  {{ post.title }}
+			  </a>
+		  </h2>
+		  <span class="article--info">
+			  <span class="article--author">autor</span>
+			  <a href="javascript:;" class="article--authorName">{{ post.author }}</a>
+		  </span>
+	  </section>
+	</article>
+		  
+		  
+		  {% endfor %}
+	
+	
+	<!--<h1>Archive of posts with {{ page.type }} '{{ page.title }}'</h1> -->
+	<!--<ul class="posts">
+	  {% for post in page.posts %}
+		<li>
+		  <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+		  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+		</li>
+	  {% endfor %}
+	</ul> -->
+
+	{% include newsletter.html %}
+	
+{% include footer.html %}
